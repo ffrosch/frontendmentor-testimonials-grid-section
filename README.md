@@ -82,6 +82,18 @@ export default defineConfig({
 });
 ```
 
+Add the `@` alias to `tsconfig.app.json`
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
 Add fonts and tailwind as well as your basic theme to `src/style.css`
 
 ```css
