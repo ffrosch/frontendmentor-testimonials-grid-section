@@ -218,3 +218,8 @@ This project really helped me to get more experience with CSS Grid.
 
 - Website - [florianfrosch.de](https://florianfrosch.de/)
 - Frontend Mentor - [@ffrosch](https://www.frontendmentor.io/profile/ffrosch)
+
+## Acknowledgements
+
+- [Andy Bell - Be the browser’s mentor, not its micromanager](https://www.youtube.com/watch?v=5uhIiI9Ld5M)
+- [Kevin Powell - Using CSS custom properties like this is a waste](https://www.youtube.com/watch?v=_2LwjfYc1x8&t=622s)

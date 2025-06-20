@@ -5,9 +5,10 @@ defineProps<Testimonial>();
 </script>
 
 <template>
-    <article>
-        <div>
+    <article class="grid gap-6 p-9 rounded-xl max-w-[420px]">
+        <div class="grid grid-cols-2">
             <img
+                class="row-span-2"
                 :src="person.imageUrl"
                 :alt="`Profile Picture of ${person.fullName}`"
             />
@@ -19,4 +20,15 @@ defineProps<Testimonial>();
     </article>
 </template>
 
-<style scoped></style>
+<style scoped>
+article {
+    background: var(--color-white);
+}
+
+img {
+    border: 3px solid var(--color-primary-300);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+</style>

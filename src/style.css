@@ -2,33 +2,94 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary--50: hsl(260, 100%, 95%);
-  --color-primary--300: hsl(264, 82%, 80%);
-  --color-primary--500: hsl(263, 55%, 52%);
+  /* --*: initial; /* No default utility classes */
 
-  --color-neutral-white: hsl(0, 0%, 100%);
-  --color-neutral-grey-100: hsl(214, 17%, 92%);
-  --color-neutral-grey-200: hsl(0, 0%, 81%);
-  --color-neutral-grey-400: hsl(224, 10%, 45%);
-  --color-neutral-grey-500: hsl(217, 19%, 35%);
-  --color-neutral-darkblue: hsl(219, 29%, 14%);
-  --color-neutral-black: hsl(0, 0%, 7%);
+  --color-*: initial; /* Remove all default color variables */
+  --color-primary-50: hsl(260, 100%, 95%);
+  --color-primary-300: hsl(264, 82%, 80%);
+  --color-primary-500: hsl(263, 55%, 52%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-100: hsl(214, 17%, 92%);
+  --color-grey-200: hsl(0, 0%, 81%);
+  --color-grey-400: hsl(224, 10%, 45%);
+  --color-grey-500: hsl(217, 19%, 35%);
+  --color-darkblue: hsl(219, 29%, 14%);
+  --color-black: hsl(0, 0%, 7%);
 
   --text-xs: 0.8125rem;
-  --font-barlow: "Barlow Semi Condensed", sans-serif;
+  
+  --font-sans: "Barlow Semi Condensed", sans-serif;
+
+  --font-weight-normal: 500;
+  --font-weight-bold: 600;
+}
+
+:root {
+  --line-height: 1.4;
 }
 
 body {
+  color: var(--color-darkblue);
+  background: var(--color-primary-50);
   font-size: var(--text-xs);
-  font-family: var(--font-barlow);
+  font-family: var(--font-sans);
+  line-height: var(--line-height);
+  letter-spacing: var(--tracking-wide);
+}
+
+h1, h2, h3, h4 {
+  --line-height: 1.1;
+
+  line-height: var(--line-height);
+  max-width: 24ch;
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+}
+
+h4 {
+  font-size: var(--text-sm);
+}
+
+p, li, blockquote:not([class]) {
+  max-width: 50ch;
 }
 
 a {
-  color: var(--color-blue-400);
+  color: currentColor;
   text-decoration: underline;
 }
 
 a:hover {
-  color: var(--color-blue-500);
-  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+:focus {
+  outline: 2px solid;
+  outline-offset: 0.3ch;
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+.flow {
+  --flow-space: calc(var(--line-height) * 1em);
+}  
+
+.flow > * + * { 
+  /* progressive enhancement */
+  margin-top: 1em;
+  margin-top: var(--flow-space);
 }
