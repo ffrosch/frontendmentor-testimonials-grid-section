@@ -5,30 +5,37 @@ defineProps<Testimonial>();
 </script>
 
 <template>
-    <article class="grid gap-6 p-9 rounded-xl max-w-[420px]">
-        <div class="grid grid-cols-2">
+    <article class="grid place-items-start gap-4 p-9 rounded-xl">
+        <div class="grid auto-cols">
             <img
                 class="row-span-2"
                 :src="person.imageUrl"
                 :alt="`Profile Picture of ${person.fullName}`"
             />
-            <h3>{{ person.fullName }}</h3>
-            <h4>{{ person.role }}</h4>
+            <p class="text-xl">{{ person.fullName }}</p>
+            <p class="text-sm">{{ person.role }}</p>
         </div>
         <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
+        <p class="flex grow">{{ description }}</p>
     </article>
 </template>
 
 <style scoped>
 article {
     background: var(--color-white);
+    grid-template-rows: auto auto 1fr;
+}
+
+.auto-cols {
+    column-gap: 1rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
 }
 
 img {
-    border: 3px solid var(--color-primary-300);
+    border: 2px solid var(--color-primary-300);
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
 }
 </style>

@@ -37,33 +37,12 @@ body {
   letter-spacing: var(--tracking-wide);
 }
 
-h1, h2, h3, h4 {
+h2 {
   --line-height: 1.1;
 
-  line-height: var(--line-height);
-  max-width: 24ch;
-}
-
-h1 {
-  font-size: var(--text-4xl);
-  font-weight: var(--font-weight-bold);
-}
-
-h2 {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-weight-bold);
-}
-
-h3 {
   font-size: var(--text-2xl);
-}
-
-h4 {
-  font-size: var(--text-sm);
-}
-
-p, li, blockquote:not([class]) {
-  max-width: 50ch;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height);
 }
 
 a {
@@ -82,14 +61,4 @@ a:hover {
 
 :target {
   scroll-margin-top: 2ex;
-}
-
-.flow {
-  --flow-space: calc(var(--line-height) * 1em);
-}  
-
-.flow > * + * { 
-  /* progressive enhancement */
-  margin-top: 1em;
-  margin-top: var(--flow-space);
 }
