@@ -36,15 +36,28 @@ Users should be able to:
 
 ### Initial setup
 
-Install dependencies
+Install dependencies (make sure you are already in your project folder!)
 
 ```shell
-bun create vite my-project --template vue-ts
-cd my-project
-bun add --peer typescript
+bun create vite . --template vue-ts
+# Typescript must be a peer dependency to enable
+# import and usage of types in Vue defineProps function
+bun remove typescript && bun add --peer typescript
 bun add tailwindcss
 bun add -d @tailwindcss/vite @vue/tsconfig
 bun install
+```
+
+Modify `"scripts"` in `package.json` to look like this
+
+```json
+{
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vue-tsc -b && bunx --bun vite build",
+    "preview": "bunx --bun vite preview"
+  }
+}
 ```
 
 Adjust `vite.config.js` to this
@@ -69,42 +82,42 @@ export default defineConfig({
 });
 ```
 
-Add fonts and tailwind to `src/style.css`
+Add fonts and tailwind as well as your basic theme to `src/style.css`
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 @import "tailwindcss";
-```
 
-Add this to `package.json`
+@theme {
+  --color-primary--50: hsl(260, 100%, 95%);
+  --color-primary--300: hsl(264, 82%, 80%);
+  --color-primary--500: hsl(263, 55%, 52%);
 
-```json
-{
-    "scripts": {
-        "dev": "bunx --bun vite",
-        "build": "bunx --bun vite build",
-        "preview": "bunx --bun vite preview"
-    }
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey-100: hsl(214, 17%, 92%);
+  --color-neutral-grey-200: hsl(0, 0%, 81%);
+  --color-neutral-grey-400: hsl(224, 10%, 45%);
+  --color-neutral-grey-500: hsl(217, 19%, 35%);
+  --color-neutral-darkblue: hsl(219, 29%, 14%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+
+  --text-xs: 0.8125rem;
+  --font-barlow: "Barlow Semi Condensed", sans-serif;
 }
-```
 
-Create a `tsconfig.json`
+body {
+  font-size: var(--text-xs);
+  font-family: var(--font-barlow);
+}
 
-```json
-{
-  "extends": "@vue/tsconfig/tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-  ],
+a {
+  color: var(--color-blue-400);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-blue-500);
+  font-weight: var(--font-weight-semibold);
 }
 ```
 
@@ -113,8 +126,8 @@ Create a `tsconfig.json`
 Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 
 - Mobile-first workflow
-- Flexbox
 - Tailwind custom theme
+- CSS Grid
 - [Vue](https://vuejs.org/) - JS library
 - [Vite](https://vite.dev/) - Build tool
 - [Typescript](https://www.typescriptlang.org/) - Type Safety
@@ -131,7 +144,3 @@ This project really helped me to get more experience with CSS Grid.
 
 - Website - [florianfrosch.de](https://florianfrosch.de/)
 - Frontend Mentor - [@ffrosch](https://www.frontendmentor.io/profile/ffrosch)
-
-## Acknowledgments
-
-Fade-In Animation inspired by: https://fluffykas.github.io/four-card-feature-section/
