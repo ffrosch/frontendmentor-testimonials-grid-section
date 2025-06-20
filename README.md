@@ -54,7 +54,7 @@ Modify `"scripts"` in `package.json` to look like this
 {
   "scripts": {
     "dev": "bunx --bun vite",
-    "build": "bunx --bun vue-tsc -b && bunx --bun vite build",
+    "build": "vue-tsc -b && bunx --bun vite build",
     "preview": "bunx --bun vite preview"
   }
 }
