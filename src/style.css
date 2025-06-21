@@ -29,8 +29,7 @@
 }
 
 body {
-  color: var(--color-darkblue);
-  background: var(--color-primary-50);
+  color: var(--color-grey-400);
   font-size: var(--text-xs);
   font-family: var(--font-sans);
   line-height: var(--line-height);

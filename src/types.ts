@@ -8,4 +8,5 @@ export interface Testimonial {
     person: Person;
     title: string;
     description: string;
+    decoration?: boolean;
 }
