@@ -12,7 +12,6 @@ import Quotation from '@/assets/bg-pattern-quotation.svg';
       :person="person"
       :title="title"
       :description="description"
-      :decoration="index === 0"
       :class="{
         'card--purple decoration': index === 0,
         'card--grey': index === 1,
