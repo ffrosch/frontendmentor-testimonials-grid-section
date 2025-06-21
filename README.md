@@ -202,6 +202,7 @@ Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 - Mobile-first workflow
 - Tailwind custom theme
 - CSS Grid
+- extended use of CSS custom properties
 - [Vue](https://vuejs.org/) - JS library
 - [Vite](https://vite.dev/) - Build tool
 - [Typescript](https://www.typescriptlang.org/) - Type Safety
@@ -210,9 +211,9 @@ Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 ### What I learned
 
 Tailwind 4 combined with the "Tailwind CSS Intellisense" extension for VS Code makes styling and creating custom utility classes a breeze. Such a delight!
-Using Bun and Vue for such a small project is overkill for sure, but it's great to get more practice in quickly setting up a development environment.
+Using Bun, Vue and Typescript for such a small project is overkill for sure, but it's great to get more practice in quickly setting up a development environment.
 
-This project really helped me to get more experience with CSS Grid.
+This project really helped me to get more experience with CSS Grid. And I even learned a cool new approach on flexibly styling different versions of the same component with CSS custom properties.
 
 ## Author
 
