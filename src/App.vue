@@ -27,14 +27,12 @@ import testimonials from '@/testimonials.ts';
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-@media all and (min-width: 768px) and (max-width: 1330px) {
-.auto-cols {
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
-}
+@media all and (min-width: 700px) and (max-width: 1330px) {
   .auto-cols> :nth-child(4) {
     grid-row: 1;
     grid-column: 2;
   }
+
   .auto-cols> :nth-child(5) {
     grid-column: span 2;
   }

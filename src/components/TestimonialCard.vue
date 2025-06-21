@@ -5,7 +5,7 @@ defineProps<Testimonial>();
 </script>
 
 <template>
-    <article class="grid place-items-start gap-4 p-9 rounded-xl">
+    <article class="grid place-items-start gap-4 p-9 rounded-xl shadow-lg">
         <div class="grid auto-cols">
             <img
                 class="row-span-2"
