@@ -13,7 +13,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   - [What I learned](#what-i-learned)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
-- [Links](#links)
+- [Real Examples](#real-examples)
 
 ## Overview
 
@@ -227,6 +227,6 @@ This project really helped me to get more experience with CSS Grid. And I even l
 - [Andy Bell - Be the browser’s mentor, not its micromanager](https://www.youtube.com/watch?v=5uhIiI9Ld5M)
 - [Kevin Powell - Using CSS custom properties like this is a waste](https://www.youtube.com/watch?v=_2LwjfYc1x8&t=622s)
 
-## Links
+## Real Examples
 
 - [Prodi.gy Testimonial Grid](https://prodi.gy/)
